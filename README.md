@@ -1,5 +1,8 @@
 # ibGoClient
 
+Go client that connects to the IB Gateway and logs about everything to stdout. 
+Sample usage in example folder.  
+
 ## Conventions
 * File encoding: UTF-8
 * File separator: \n LF (Unix / Mac style) 
@@ -12,9 +15,18 @@
 * Go 1.15
 * Make 
 * clang 
-* export CC=clang in .bachrc as bazel depends on clang toolchain 
 
-Make setup will install all build requirements, build & run the project. 
+All build requirements will be checked and installed with "make setup"
+
+## Bazel setup
+
+Run only once: 
+```
+./scripts/bash-setup.sh
+```
+
+This appends "export CC=clang" to .bachrc as bazel depends on the clang toolchain. 
+Bazel itself will be installed during  "make setup" if its not already present. 
 
 ## Getting started:
 
@@ -22,7 +34,7 @@ Make setup will install all build requirements, build & run the project.
 2. cd ibGoClient
 3. make all 
 
-Ensure IB Gateway runs on localhost:4003 
+Ensure IB Gateway already runs on localhost:4003 
 
 ### Run with make
 
@@ -48,4 +60,8 @@ go run main.go
  bazel run //example:main
 ```
  
+## Known issues
 
+* GoLand may shows some syntax errors but project builds & runs just fine.
+* IbWrapper not implement. Just the client & an example how to use it.  
+* Missing graceful shutdown in case of failed gateway connect. 
