@@ -30,7 +30,7 @@ const (
  *
  * symbol - string defines the equity i.e. APPL
  *
- * primaryExchange - string defines the main trading place.
+ * primaryExchange - string defines the ib trading place.
  *
  * Currency is USD by default
  *
@@ -105,9 +105,9 @@ func GetFutureContract(localSymbol string, futExchange string) ibapi.Contract {
 
 /**
  * GetContinuousFutureContract returns a continuous future contract object.
- * symbol - string defines the main Future i.e. ES
+ * symbol - string defines the ib Future i.e. ES
  *
- * futExchange - string  exchange trading the main future
+ * futExchange - string  exchange trading the ib future
  *
  * When futExchange is an empty string, GLOBEX is used by default.
  *

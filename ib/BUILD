@@ -5,8 +5,15 @@ go_library(
     srcs = [
         "contract_utils.go",
         "error_utils.go",
+        "ib.go",
+        "ib_env.go",
+        "ib_wrapper.go",
+        "structs.go",
     ],
-    importpath = "quantum/ib",
+    importpath = "ibGoClient/ib",
     visibility = ["//visibility:public"],
-    deps = ["@com_github_hadrianl_ibapi//:go_default_library"],
+    deps = [
+        "@com_github_hadrianl_ibapi//:go_default_library",
+        "@org_uber_go_zap//:go_default_library",
+    ],
 )

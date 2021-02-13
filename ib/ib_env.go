@@ -7,7 +7,7 @@ const (
 )
 
 // similar function for Cloud / cluster config
-func GetLocalIbConfig() IBConfig {
+func GetIbConfigLocal() IBConfig {
 	return IBConfig{
 		IbHost:   host,
 		IbPort:   port,
