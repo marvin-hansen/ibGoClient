@@ -1,15 +1,68 @@
-# Binaries for programs and plugins
-*.exe
-*.exe~
-*.dll
-*.so
-*.dylib
+.idea/
+.idea/*
 
-# Test binary, built with `go test -c`
-*.test
+.project
+.classpath
+.settings/
+.groovy/
+.ijwb/
 
-# Output of the go coverage tool, specifically when used with LiteIDE
-*.out
+bin/
+target/
 
-# Dependency directories (remove the comment below to include it)
-# vendor/
+*.pyc
+Logs/*
+*.local
+
+# ignore custom symlinks
+start-db.sh
+stop-db.sh
+setup-db.sh
+
+# Emacs save files
+*~
+\#*\#
+.\#*
+
+# Vim-related files
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+
+### https://raw.github.com/github/gitignore/90f149de451a5433aebd94d02d11b0e28843a1af/Terraform.gitignore
+
+# Local .terraform directories
+terraform/*/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+
+# tmp plan files.
+*.plan
+
+# Ignore any .tfvars files that are generated automatically for each Terraform run. Most
+# .tfvars files are managed as part of configuration and so should be included in
+# version control.
+#
+terraform/dev/terraform.tfvars
+terraform/service.json
+
+bazel-out
+dist
+
+planter
+!planter/.gitkeep
+
+output.log
+/terraform/dev/.terraform.lock.hcl
+
+
+/proto/smx/smx.pb.go
+/proto/dbx/db.pb.go
+/proto/*/*.pb.go
