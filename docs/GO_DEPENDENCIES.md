@@ -23,8 +23,8 @@ Double check for breaking changes
 
 ```
 bazel build
-bazel build //proto/smx:smx_go_proto
-bazel run //services/smx:image
+bazel build  //ib:go_default_library
+bazel run    //example:main
 ```
 
 Each of the targets should run just fine after having added new dependencies. 

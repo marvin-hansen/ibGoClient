@@ -60,6 +60,23 @@ go run main.go
  bazel run //example:main
 ```
  
+## Dependencies management. 
+
+After each go get package, run 
+
+```
+make configure
+```
+
+Which auto-converts go mod dependencies into bazel dependencies, auto-updates all BUILD files, 
+and ensures build remain functional. For details, see docs folder. In general, go mod & bazel dependencies 
+should remain in sync to ensure the project can be build  with plain go in case bazel isn't an option for any reason. 
+
+
+Note, bazel can also build docker containers, publish images to registry, and deploy to kubernetes, but
+none of that has been configured. Search for the bazel docker and bazel k8s rules for details when needed. 
+
+ 
 ## Known issues
 
 * GoLand may shows some syntax errors but project builds & runs just fine.
