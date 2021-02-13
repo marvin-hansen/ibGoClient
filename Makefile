@@ -9,13 +9,14 @@ CC=clang # required by bazel
 .PHONY: help
 help:
 	@echo ''
-	@echo '    make all   			Installs, configures, and build the project in one command.'
+	@echo '    make all   			Installs, configures, builds and runs the project in one command.'
 	@echo '    make setup   		Installs all requirements and tools.'
 	@echo '    make configure		Configures bazel and gazelle to manage dependencies semi-automatically.'
 	@echo '    make build		    	Build the project with bazel.'
+	@echo '    make run			Runs the binary with bazel.'
 
 .PHONY: all
-all: setup  configure build
+all: setup  configure build run
 
 .PHONY: setup
 setup:
@@ -29,3 +30,6 @@ configure:
 build:
 	@source scripts/build.sh
 
+.PHONY: run
+run:
+	@source scripts/run.sh
