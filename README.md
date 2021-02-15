@@ -1,7 +1,12 @@
 # ibGoClient
 
-Go client that connects to the IB Gateway and logs about everything to stdout. 
+Go client based on [GOLang IB API](https://github.com/hadrianl/ibapi) that connects to the IB Gateway and logs about everything to stdout. 
 Sample usage in example folder.  
+
+## Credit & reference 
+* [GOLang IB API](https://github.com/hadrianl/ibapi)
+* [IB API] (https://interactivebrokers.github.io/tws-api/)
+
 
 ## Conventions
 * File encoding: UTF-8
